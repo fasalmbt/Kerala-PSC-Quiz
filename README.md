@@ -1,4 +1,10 @@
-# Kerala PSC Quiz
+<h1 align="center">
+  <br>
+  <a href="https://github.com/fasalmbt/Kerala-PSC-Quiz"><img src="https://raw.githubusercontent.com/fasalmbt/Kerala-PSC-Quiz/main/public/logo.png" alt="kerala"></a>
+  <br>
+  Reconme
+  <br>
+</h1>
 Quiz app for Kerala PSC
 
 <b>Go to src -> App.js</b>
@@ -19,4 +25,4 @@ const questions = [
 
 ```
 
-Add more questions in this part and help this project.
+Add more questions in this part and help this project, if you are a contributer.
