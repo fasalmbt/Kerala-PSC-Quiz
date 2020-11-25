@@ -2,7 +2,7 @@
   <br>
   <a href="https://github.com/fasalmbt/Kerala-PSC-Quiz"><img src="https://raw.githubusercontent.com/fasalmbt/Kerala-PSC-Quiz/main/public/logo.png" alt="kerala"></a>
   <br>
-  Reconme
+    Kerala PSC Quiz
   <br>
 </h1>
 Quiz app for Kerala PSC
