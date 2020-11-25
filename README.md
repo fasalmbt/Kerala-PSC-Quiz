@@ -1,10 +1,11 @@
 # Kerala PSC Quiz
 Quiz app for Kerala PSC
 
-Go to src -> App.js
+<b>Go to src -> App.js</b>
 <br/>
 
 ```
+const questions = [
 {
 			questionText: 'കേരളത്തിൽ എത്ര ഗ്രാമപഞ്ചായത്തുകൾ ഉണ്ട്?',
 			answerOptions: [
@@ -14,7 +15,8 @@ Go to src -> App.js
 				{ answerText: '943', isCorrect: false },
 			],
 }
+];
 
 ```
 
-Add more questions and help this project.
+Add more questions in this part and help this project.
