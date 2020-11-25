@@ -1,8 +1,16 @@
-version: 1
-update_configs:
-  # Keep package.json up to date as soon as
-  # new versions are published to the npm registry
-  - package_manager: "javascript"
+# Basic dependabot.yml file with
+# minimum configuration for two package managers
+
+version: 2
+updates:
+  # Enable version updates for npm
+  - package-ecosystem: "npm"
+    # Look for `package.json` and `lock` files in the `root` directory
     directory: "/"
-    update_schedule: "weekly"
-    version_requirement_updates: "auto"
+    # Check the npm registry for updates every day (weekdays)
+    schedule:
+      interval: "daily"
+
+    # Check for updates once a week
+    schedule:
+      interval: "weekly"
