@@ -5,7 +5,9 @@
     Kerala PSC Quiz
   <br>
 </h1>
-Quiz app for Kerala PSC
+```
+<p align="center">Quiz app for Kerala PSC</p>
+```
 
 <b>Go to src -> App.js</b>
 <br/>
