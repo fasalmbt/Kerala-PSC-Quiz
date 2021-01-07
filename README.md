@@ -8,6 +8,7 @@
 <p align="center">
     <img alt="Open Source" src="https://img.shields.io/badge/Maintained%3F-Yes-9cf?style=for-the-badge">
     <img alt="fork" src="https://img.shields.io/github/issues/fasalmbt/Kerala-PSC-Quiz?color=orange&style=for-the-badge">
+    <img alt="closedpr" src="https://img.shields.io/github/issues-pr-closed/fasalmbt/Kerala-PSC-Quiz?color=blue&style=for-the-badge">
 </p>
 
 
