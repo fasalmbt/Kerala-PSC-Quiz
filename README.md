@@ -5,7 +5,10 @@
     Kerala PSC Quiz
   <br>
 </h1>
-<p align="center">Quiz app for Kerala PSC</p>
+<p align="center">
+    <img alt="Open Source" src="https://img.shields.io/badge/Maintained%3F-Yes-9cf?style=for-the-badge">
+    <img alt="fork" src="https://img.shields.io/github/issues/fasalmbt/Kerala-PSC-Quiz?color=orange&style=for-the-badge">
+</p>
 
 
 <b>Go to src -> App.js</b>
