@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Footer from './footer';
-import { default as questions } from './questions.json';
+import { default as questions } from './data.json';
 
 
 export default function App() {
@@ -31,7 +31,7 @@ export default function App() {
 				<>
 					<div className='question-section'>
 						<div className='question-count'>
-							<span>ചോദ്യം {currentQuestion + 1}</span>/{questions.length}
+							<span>ചോദ്യം: {currentQuestion}</span>/{questions.length}
 						</div>
 						<div className='question-text'>{questions[currentQuestion].questionText}</div>
 					</div>

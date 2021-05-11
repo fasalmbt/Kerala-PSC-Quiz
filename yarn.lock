@@ -8852,10 +8852,10 @@
     "source-map" "^0.6.1"
     "supports-color" "^6.1.0"
 
-"postcss@^8.1.0":
+"postcss@^8.2.10":
   "integrity" "sha512-iBXEV5VTTYaRRdxiFYzTtuv2lGMQBExqkZKSzkJe+Fl6rvQrA/49UVGKqB+LG54hpW/TtDBMGds8j33GFNW7pg=="
   "resolved" "https://registry.npmjs.org/postcss/-/postcss-8.1.10.tgz"
-  "version" "8.1.10"
+  "version" "8.2.10"
   dependencies:
     "colorette" "^1.2.1"
     "nanoid" "^3.1.18"
