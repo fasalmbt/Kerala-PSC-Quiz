@@ -13,11 +13,10 @@
 </p>
 
 
-<b>Go to src -> App.js</b>
+<b>Go to src -> data.json</b>
 <br/>
 
 ```
-const questions = [
 {
 			questionText: 'കേരളത്തിൽ എത്ര ഗ്രാമപഞ്ചായത്തുകൾ ഉണ്ട്?',
 			answerOptions: [
@@ -27,7 +26,6 @@ const questions = [
 				{ answerText: '943', isCorrect: false },
 			],
 }
-];
 
 ```
 
