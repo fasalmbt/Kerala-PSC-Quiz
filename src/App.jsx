@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import Footer from './Footer';
-import { default as questions } from './data.json';
-import Swal from 'sweetalert2';
+import React, { useState } from "react";
+import Footer from "./Footer";
+import { default as questions } from "./data.json";
+import Swal from "sweetalert2";
 
 export default function App() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -19,9 +19,9 @@ export default function App() {
     } else {
       setShowScore(true);
       Swal.fire({
-        title: 'നിങ്ങളുടെ ശരിയുത്തരങ്ങൾ:',
+        title: "നിങ്ങളുടെ ശരിയുത്തരങ്ങൾ:",
         html: `നിങ്ങളുടെ സ്കോർ: <strong>${score} / ${questions.length}</strong>`,
-        icon: 'success'
+        icon: "success",
       });
     }
   };
@@ -34,39 +34,41 @@ export default function App() {
             <div className="question-count">
               <span>ചോദ്യം: {currentQuestion + 1}</span>/{questions.length}
             </div>
-            <div className="question-text">{questions[currentQuestion].questionText}</div>
+            <div className="question-text">
+              {questions[currentQuestion].questionText}
+            </div>
           </div>
           <div className="answer-section">
-            {questions[currentQuestion].answerOptions.map((answerOption, index) => (
-              <button
-                key={index}
-                onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}
-              >
-                {answerOption.answerText}
-              </button>
-            ))}
+            {questions[currentQuestion].answerOptions.map(
+              (answerOption, index) => (
+                <button
+                  key={index}
+                  onClick={() =>
+                    handleAnswerOptionClick(answerOption.isCorrect)
+                  }
+                >
+                  {answerOption.answerText}
+                </button>
+              )
+            )}
           </div>
         </>
       ) : (
         <>
           {questions.map((question, index) => (
-            <div key={index} style={{marginBottom: 10}}>
+            <div key={index} style={{ marginBottom: 10 }}>
               <strong>{question.questionText}</strong>
               {question.answerOptions.map((option, index) => (
                 <div key={index}>
                   {option.answerText}
-                  {option.isCorrect ? '✅' : '❌'}
+                  {option.isCorrect ? "✅" : "❌"}
                 </div>
               ))}
             </div>
           ))}
-		  <a href="/">
-		  <button >
-  👍 GO TO QUIZ
-</button>
-		  </a>
-
-
+          <a href="/">
+            <button>👍 GO TO QUIZ</button>
+          </a>
         </>
       )}
       <Footer />
