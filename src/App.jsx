@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Footer from "./Footer";
-import { default as questions } from "./data.json";
+import Footer from "./components/Footer";
+import { default as questions } from "./data/data.json";
 import Swal from "sweetalert2";
 
 export default function App() {
