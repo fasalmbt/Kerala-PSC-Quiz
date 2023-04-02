@@ -250,5 +250,68 @@
                 "isCorrect": false
             }
         ]
+    },
+    {
+        "questionText": "ഇന്ത്യയുടെ തലസ്ഥാനം കൊൽക്കത്തയിൽ നിന്നും ഡൽഹിയിലേക്ക് മാറ്റിയ വർഷം ഏത്?",
+        "answerOptions": [
+            {
+                "answerText": "1910",
+                "isCorrect": false
+            },
+            {
+                "answerText": "1911",
+                "isCorrect": false
+            },
+            {
+                "answerText": "1912",
+                "isCorrect": true
+            },
+            {
+                "answerText": "1913",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "questionText": "ഇന്ത്യൻ റിസർവ്ബാങ്ക് സ്ഥാപിതമായ വർഷം?",
+        "answerOptions": [
+            {
+                "answerText": "1932",
+                "isCorrect": false
+            },
+            {
+                "answerText": "1935",
+                "isCorrect": true
+            },
+            {
+                "answerText": "1937",
+                "isCorrect": false
+            },
+            {
+                "answerText": "1939",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "questionText": "ആധുനിക ഇന്ത്യയുടെ പിതാവ് എന്നറിയപ്പെടുന്നത് ആരാണ്?",
+        "answerOptions": [
+            {
+                "answerText": "രാജാറാം മോഹൻറോയ്",
+                "isCorrect": true
+            },
+            {
+                "answerText": "സുഭാഷ് ചന്ദ്രബോസ്",
+                "isCorrect": false
+            },
+            {
+                "answerText": "രബീന്ദ്രനാഥ് ടാഗോർ",
+                "isCorrect": false
+            },
+            {
+                "answerText": "മോഹൻ‌ദാസ് കരംചന്ദ് ഗാന്ധി",
+                "isCorrect": false
+            }
+        ]
     }
 ]
