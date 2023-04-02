@@ -229,5 +229,26 @@
                 "isCorrect": false
             }
         ]
+    },
+    {
+        "questionText": "അർജുന അവാർഡ് ഇന്ത്യയിൽ നടപ്പാക്കിയ വർഷം?",
+        "answerOptions": [
+            {
+                "answerText": "1954",
+                "isCorrect": false
+            },
+            {
+                "answerText": "1957",
+                "isCorrect": false
+            },
+            {
+                "answerText": "1961",
+                "isCorrect": true
+            },
+            {
+                "answerText": "1968",
+                "isCorrect": false
+            }
+        ]
     }
 ]
