@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Footer from "./components/Footer";
-import { default as questions } from "./data/data.json";
+import questions from "./data/data.json";
 import Swal from "sweetalert2";
 
 export default function App() {
@@ -19,58 +19,66 @@ export default function App() {
     } else {
       setShowScore(true);
       Swal.fire({
-        title: "നിങ്ങളുടെ ശരിയുത്തരങ്ങൾ:",
-        html: `നിങ്ങളുടെ സ്കോർ: <strong>${score} / ${questions.length}</strong>`,
+        title: "🎉 Your Score",
+        html: `<strong>${score} / ${questions.length}</strong>`,
         icon: "success",
-      });
+        confirmButtonText: "Retry",
+        confirmButtonColor: "#4CAF50",
+      }).then(() => window.location.reload());
     }
   };
 
   return (
-    <div className="app">
-      {!showScore ? (
-        <>
-          <div className="question-section">
-            <div className="question-count">
-              <span>ചോദ്യം: {currentQuestion + 1}</span>/{questions.length}
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white p-4">
+      <div className="w-full max-w-2xl bg-gray-800 p-6 rounded-lg shadow-lg">
+        {!showScore ? (
+          <>
+            <div className="mb-6">
+              <h2 className="text-xl font-semibold mb-2">
+                📖 Question {currentQuestion + 1} / {questions.length}
+              </h2>
+              <p className="text-lg">{questions[currentQuestion].questionText}</p>
             </div>
-            <div className="question-text">
-              {questions[currentQuestion].questionText}
-            </div>
-          </div>
-          <div className="answer-section">
-            {questions[currentQuestion].answerOptions.map(
-              (answerOption, index) => (
+            <div className="grid grid-cols-2 gap-4">
+              {questions[currentQuestion].answerOptions.map((answerOption, index) => (
                 <button
                   key={index}
-                  onClick={() =>
-                    handleAnswerOptionClick(answerOption.isCorrect)
-                  }
+                  onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}
+                  className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-4 rounded-lg transition-all duration-200"
                 >
                   {answerOption.answerText}
                 </button>
-              )
-            )}
-          </div>
-        </>
-      ) : (
-        <>
-          {questions.map((question, index) => (
-            <div key={index} style={{ marginBottom: 10 }}>
-              <strong>{question.questionText}</strong>
-              {question.answerOptions.map((option, index) => (
-                <div key={index}>
-                  {option.answerText}
-                  {option.isCorrect ? "✅" : "❌"}
-                </div>
               ))}
             </div>
-          ))}
-          <a href="/">
-            <button>👍 GO TO QUIZ</button>
-          </a>
-        </>
-      )}
+          </>
+        ) : (
+          <>
+            {questions.map((question, index) => (
+              <div key={index} className="mb-4 p-4 border border-gray-600 rounded-lg">
+                <strong className="text-lg">{question.questionText}</strong>
+                <div className="mt-2 space-y-1">
+                  {question.answerOptions.map((option, i) => (
+                    <p
+                      key={i}
+                      className={`p-2 rounded-lg ${
+                        option.isCorrect ? "bg-green-600" : "bg-red-600"
+                      }`}
+                    >
+                      {option.answerText} {option.isCorrect ? "✅" : "❌"}
+                    </p>
+                  ))}
+                </div>
+              </div>
+            ))}
+            <button
+              onClick={() => window.location.reload()}
+              className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg mt-4"
+            >
+              🔄 Retry Quiz
+            </button>
+          </>
+        )}
+      </div>
       <Footer />
     </div>
   );
