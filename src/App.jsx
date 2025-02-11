@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import Swal from "sweetalert2";
 import questions from "./data/data.json";
 
@@ -37,7 +35,7 @@ export default function QuizApp() {
         backdropFilter: "blur(15px)",
       }}
     >
-      <Card
+      <div
         className="w-full max-w-2xl p-6 rounded-xl shadow-lg"
         style={{
           background: "rgba(255, 255, 255, 0.15)",
@@ -56,13 +54,17 @@ export default function QuizApp() {
             </div>
             <div className="grid grid-cols-2 gap-4">
               {questions[currentQuestion].answerOptions.map((answerOption, index) => (
-                <Button
+                <button
                   key={index}
                   onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}
                   className="bg-white/20 hover:bg-white/30 text-white font-bold py-3 px-4 rounded-lg transition-all duration-200"
+                  style={{
+                    border: "1px solid rgba(255, 255, 255, 0.4)",
+                    backdropFilter: "blur(10px)",
+                  }}
                 >
                   {answerOption.answerText}
-                </Button>
+                </button>
               ))}
             </div>
           </>
@@ -85,15 +87,15 @@ export default function QuizApp() {
                 </div>
               </div>
             ))}
-            <Button
+            <button
               onClick={() => window.location.reload()}
               className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg mt-4"
             >
               🔄 Retry Quiz
-            </Button>
+            </button>
           </>
         )}
-      </Card>
+      </div>
     </div>
   );
 }
